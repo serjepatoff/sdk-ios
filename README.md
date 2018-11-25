@@ -141,7 +141,7 @@ This fork uses freeware QRCodeReader.swift for 2D/3D barcode scanning instead of
 * Minimum iOS Version 11
 * Requires Camera permission enabled in order to scan codes
 * Capable of scanning codes with the following symbologies:
-  * UPCE, UPC12, EAN8, EAN13, CODE 39, CODE 128, ITF, QR, DATAMATRIX
+  * QR, DATAMATRIX, EAN8, EAN13, UPCE, CODE39, CODE39MOD43, CODE93, CODE128, PDF417, AZTEC, INTERLEAVED2OF5, ITF14
 
 ## Sample Symbologies
 

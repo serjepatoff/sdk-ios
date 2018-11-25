@@ -14,15 +14,19 @@
 
 import UIKit
 import AmbrosusSDK
+import AVFoundation
+import QRCodeReader
 
 final class ScanDataFormatter {
+    func translateSymbology(from avFoundationRepresentation: String) -> String {
+        return avFoundationRepresentation.components(separatedBy: ".").last?.lowercased().replacingOccurrences(of: "-", with: "")  ?? "unknown"
+    }
 
     func getFormattedString(for barcodeStr: String?, symbology: String ) -> String {
         var dataLower = (barcodeStr ?? "").lowercased()
-        let symbologyLower = symbology.lowercased()
         
-        switch symbologyLower {
-        case "qr":
+        switch symbology {
+        case "qrcode":
             let baseURL = "amb.to"
             let replacementStrings = ["http://" + baseURL + "/",
                                       "https://" + baseURL + "/"]
@@ -35,7 +39,7 @@ final class ScanDataFormatter {
                     return formattedData
                 }
             }
-            return symbologyLower + ":" + dataLower
+            return symbology + ":" + dataLower
             
         case "datamatrix":
             let mappingStrings: [String: String] = ["(01)": "[identifiers.gtin]=", "(21)": "&[identifiers.sn]=", "(10)": "&[identifiers.batch]=", "(17)": "&[identifiers.expiry]="]
@@ -48,7 +52,7 @@ final class ScanDataFormatter {
             return dataLower
             
         default:
-            let queryString = "[identifiers." + symbologyLower + "]=" + dataLower
+            let queryString = "[identifiers." + symbology + "]=" + dataLower
             return queryString
         }
     }
@@ -58,24 +62,29 @@ final class ScanViewController: UIViewController {
     
     fileprivate let didShowInstructionsKey = "didShowInstructions"
     
-//    private lazy var barcodePicker: SBSBarcodePicker = {
-//        let settings = SBSScanSettings.default()
-//
-//        let symbologies: Set<SBSSymbology> = [.upce, .upc12, .ean8, .ean13, .code39, .code128, .itf, .qr, .datamatrix]
-//        for symbology in symbologies {
-//            settings.setSymbology(symbology, enabled: true)
-//        }
-//
-//        // Create the barcode picker with the settings just created
-//        let barcodePicker = SBSBarcodePicker(settings:settings)
-//        return barcodePicker
-//    }()
+    private lazy var qrReaderVC: QRCodeReaderViewController = {
+        let builder = QRCodeReaderViewControllerBuilder {
+            let codeTypes : [AVMetadataObject.ObjectType] = [.qr, .dataMatrix, .ean13, .ean8,
+                                                             .upce, .code39, .code39Mod43, .code93,
+                                                             .code128, .pdf417, .aztec, .interleaved2of5,
+                                                             .itf14]
+            
+            $0.reader                  = QRCodeReader(metadataObjectTypes: codeTypes, captureDevicePosition: .back)
+            $0.showTorchButton         = true
+            $0.showSwitchCameraButton  = false
+            $0.showCancelButton        = false
+            $0.preferredStatusBarStyle = .default
+            $0.reader.stopScanningWhenCodeIsFound = false
+        }
+        
+        return QRCodeReaderViewController(builder: builder)
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        //!!!!! tabBarController?.tabBar.centerItems()
+        tabBarController?.tabBar.centerItems()
         let leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "information"), style: .plain, target: self, action: #selector(tappedHelp))
         navigationController?.navigationBar.topItem?.leftBarButtonItem = leftBarButtonItem
         setupScanner()
@@ -87,12 +96,12 @@ final class ScanViewController: UIViewController {
 
         setNeedsStatusBarAppearanceUpdate()
         navigationController?.navigationBar.topItem?.title = "Scan"
-        //!!!!! barcodePicker.resumeScanning()
+        qrReaderVC.startScanning()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //!!!!! barcodePicker.pauseScanning()
+        qrReaderVC.stopScanning()
     }
     
     @objc func tappedHelp() {
@@ -150,18 +159,10 @@ final class ScanViewController: UIViewController {
     }
 
     private func setupScanner() {
-        //!!!!!
-//        // Add the barcode picker as a child view controller
-//        addChildViewController(barcodePicker)
-//        view.addSubview(barcodePicker.view)
-//        barcodePicker.didMove(toParentViewController: self)
-//
-//        // Set the allowed interface orientations. The value UIInterfaceOrientationMaskAll is the
-//        // default and is only shown here for completeness.
-//        barcodePicker.allowedInterfaceOrientations = .all
-//        // Set the delegate to receive scan event callbacks
-//        barcodePicker.scanDelegate = self
-//        barcodePicker.startScanning()
+        addChildViewController(qrReaderVC)
+        view.addSubview(qrReaderVC.view)
+        qrReaderVC.didMove(toParentViewController: self)
+        qrReaderVC.delegate = self
     }
 
     private func presentAssetViewController(with asset: AMBAsset) {
@@ -174,85 +175,81 @@ final class ScanViewController: UIViewController {
             self.navigationController?.pushViewController(assetDetailCollectionViewController, animated: true)
         }
     }
-
 }
 
-//extension ScanViewController: SBSScanDelegate {
-//    // This delegate method of the SBSScanDelegate protocol needs to be implemented by
-//    // every app that uses the Scandit Barcode Scanner and this is where the custom application logic
-//    // goes. In the example below, we are just showing an alert view with the result.
-//    func barcodePicker(_ picker: SBSBarcodePicker, didScan session: SBSScanSession) {
-//        // Call pauseScanning on the session (and on the session queue) to immediately pause scanning
-//        // and close the camera. This is the preferred way to pause scanning barcodes from the
-//        // SBSScanDelegate as it is made sure that no new codes are scanned.
-//        // When calling pauseScanning on the picker, another code may be scanned before pauseScanning
-//        // has completely paused the scanning process.
-//        session.pauseScanning()
-//
-//        let code = session.newlyRecognizedCodes[0]
-//        // The barcodePicker(_:didScan:) delegate method is invoked from a picker-internal queue. To
-//        // display the results in the UI, you need to dispatch to the main queue. Note that it's not
-//        // allowed to use SBSScanSession in the dispatched block as it's only allowed to access the
-//        // SBSScanSession inside the barcodePicker(_:didScan:) callback. It is however safe to
-//        // use results returned by session.newlyRecognizedCodes etc.
-//        DispatchQueue.main.async {
-//            self.performAssetScan(with: picker, session: session, code: code)
-//        }
-//    }
-//
-//    private func presentAssetScanFailureAlert(with picker: SBSBarcodePicker, code: SBSCode, query: String) {
-//        let alert = UIAlertController(title: "Scanned \(code.symbologyString) code",
-//            message: "Failed to find Ambrosus Asset from request with query: " + query,
-//            preferredStyle: .alert)
-//        let action = UIAlertAction(title: "OK", style: .default) { _ in
-//            picker.resumeScanning()
-//        }
-//        alert.addAction(action)
-//        DispatchQueue.main.async {
-//            self.present(alert, animated: true, completion: nil)
-//        }
-//    }
-//
-//    private func performAssetScan(with picker: SBSBarcodePicker, session: SBSScanSession, code: SBSCode) {
-//        let data = code.data ?? ""
-//        let scanDataFormatter = ScanDataFormatter()
-//        let query = scanDataFormatter.getFormattedString(for: code.data, symbology: code.symbologyString)
-//        guard !data.isEmpty else {
-//            presentAssetScanFailureAlert(with: picker, code: code, query: query)
-//            return
-//        }
-//
-//        // If there is no symbology string the query is an id
-//        if code.symbology == .qr && !query.contains(code.symbologyString) {
-//
-//            AMBNetwork.requestAsset(fromId: query, completion: { (asset) in
-//                guard let asset = asset else {
-//                    self.presentAssetScanFailureAlert(with: picker, code: code, query: query)
-//                    return
-//                }
-//                AMBDataStore.sharedInstance.assetStore.insert(asset)
-//                self.presentAssetViewController(with: asset)
-//                return
-//            })
-//        } else {
-//            AMBNetwork.requestEvents(fromQuery: query, completion: { (events) in
-//                guard let events = events,
-//                    let assetId = events.first?.assetId else {
-//                        self.presentAssetScanFailureAlert(with: picker, code: code, query: query)
-//                        return
-//                }
-//                AMBDataStore.sharedInstance.eventStore.insert(events)
-//                AMBNetwork.requestAsset(fromId: assetId, completion: { (asset) in
-//                    guard let asset = asset else {
-//                        self.presentAssetScanFailureAlert(with: picker, code: code, query: query)
-//                        return
-//                    }
-//                    AMBDataStore.sharedInstance.assetStore.insert(asset)
-//                    self.presentAssetViewController(with: asset)
-//                    return
-//                })
-//            })
-//        }
-//    }
-//}
+extension ScanViewController: QRCodeReaderViewControllerDelegate {
+    func reader(_ reader: QRCodeReaderViewController, didScanResult result: QRCodeReaderResult) {
+        reader.stopScanning()
+        let value = result.value
+        let symbologyAVF = result.metadataType
+        
+        DispatchQueue.main.async {
+            self.processIncomingBarcode(with: reader, value: value, symbologyAVF: symbologyAVF)
+        }
+    }
+    
+    func readerDidCancel(_ reader: QRCodeReaderViewController) {
+        reader.stopScanning()
+    }
+    
+    private func presentAssetScanFailureAlert(with reader: QRCodeReaderViewController, symbology: String, query: String) {
+        let alert = UIAlertController(title: "Scanned \(symbology) code",
+            message: "Failed to find Ambrosus Asset from request with query: " + query,
+            preferredStyle: .alert)
+        
+        let action = UIAlertAction(title: "OK", style: .default) { _ in
+            reader.startScanning()
+        }
+        
+        alert.addAction(action)
+        
+        DispatchQueue.main.async {
+            reader.stopScanning()
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+
+    private func processIncomingBarcode(with picker: QRCodeReaderViewController, value: String, symbologyAVF: String) {
+        let scanDataFormatter = ScanDataFormatter()
+        let symbologyShort = scanDataFormatter.translateSymbology(from: symbologyAVF)
+        let query = scanDataFormatter.getFormattedString(for: value, symbology: symbologyShort)
+        
+        guard !value.isEmpty else {
+            presentAssetScanFailureAlert(with: picker, symbology: symbologyAVF, query: query)
+            return
+        }
+
+        // If there is no symbology string the query is an id
+        if symbologyShort == "qrcode" && !query.contains(symbologyShort) {
+
+            AMBNetwork.requestAsset(fromId: query, completion: { (asset) in
+                guard let asset = asset else {
+                    self.presentAssetScanFailureAlert(with: picker, symbology: symbologyAVF, query: query)
+                    return
+                }
+                AMBDataStore.sharedInstance.assetStore.insert(asset)
+                self.presentAssetViewController(with: asset)
+                return
+            })
+        } else {
+            AMBNetwork.requestEvents(fromQuery: query, completion: { (events) in
+                guard let events = events,
+                    let assetId = events.first?.assetId else {
+                        self.presentAssetScanFailureAlert(with: picker, symbology: symbologyAVF, query: query)
+                        return
+                }
+                AMBDataStore.sharedInstance.eventStore.insert(events)
+                AMBNetwork.requestAsset(fromId: assetId, completion: { (asset) in
+                    guard let asset = asset else {
+                        self.presentAssetScanFailureAlert(with: picker, symbology: symbologyAVF, query: query)
+                        return
+                    }
+                    AMBDataStore.sharedInstance.assetStore.insert(asset)
+                    self.presentAssetViewController(with: asset)
+                    return
+                })
+            })
+        }
+    }
+}
 

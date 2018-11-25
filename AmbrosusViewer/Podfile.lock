@@ -1,8 +1,14 @@
 PODS:
   - AmbrosusSDK (1.0.0)
+  - QRCodeReader.swift (8.2.0)
 
 DEPENDENCIES:
   - AmbrosusSDK (from `../`)
+  - QRCodeReader.swift (= 8.2.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - QRCodeReader.swift
 
 EXTERNAL SOURCES:
   AmbrosusSDK:
@@ -10,7 +16,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AmbrosusSDK: 9c25cbb8ae685a477917e2abfc66d17392d75603
+  QRCodeReader.swift: 003eb32f18a5a675b936ec82ba0ff368cddbff45
 
-PODFILE CHECKSUM: 6b5d7e985525be3b58e336dfff17b0f7c0aecb41
+PODFILE CHECKSUM: 41ed925887cfe6a0ee6be73a39b5dc47c223a095
 
-COCOAPODS: 1.5.0
+COCOAPODS: 1.5.3
