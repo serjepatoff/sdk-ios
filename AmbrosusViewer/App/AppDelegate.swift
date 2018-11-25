@@ -21,11 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        // In order to enable the scanner you need a key for Scandit SDK, you can sign up for a 30 day Scandit trial here:
-        // https://ssl.scandit.com/customers/new?p=test
-        let scanditAppKey = "[YOUR SCANDIT KEY HERE]"
-        SBSLicense.setAppKey(scanditAppKey)
         
         UIApplication.shared.statusBarStyle = .lightContent
 

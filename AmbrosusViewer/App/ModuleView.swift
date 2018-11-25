@@ -13,6 +13,7 @@
 //
 
 import Foundation
+import UIKit
 
 final class ModuleView: UIView {
     

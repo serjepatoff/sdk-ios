@@ -13,6 +13,7 @@
 //
 
 import Foundation
+import UIKit
 
 /// Constants for colors used in the Application Interface
 struct Colors {

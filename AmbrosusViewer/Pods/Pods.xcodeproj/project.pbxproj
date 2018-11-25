@@ -29,7 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17111B12032FD200321E47A6E215892E /* AmbrosusSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AmbrosusSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		17111B12032FD200321E47A6E215892E /* AmbrosusSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AmbrosusSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		26228E53F17609CAA5233FBF01550360 /* AMBNetwork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMBNetwork.swift; path = AmbrosusSDK/AMBNetwork.swift; sourceTree = "<group>"; };
 		2870FED1C03BF9859FC713FE8BB60A25 /* Pods-AmbrosusViewer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AmbrosusViewer-resources.sh"; sourceTree = "<group>"; };
 		386B2F3A92529204D17310761819CC34 /* Pods-AmbrosusViewer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AmbrosusViewer-frameworks.sh"; sourceTree = "<group>"; };
@@ -38,17 +38,17 @@
 		60F857B310835011F9E9A00A06ACAA8B /* Pods-AmbrosusViewer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AmbrosusViewer-acknowledgements.markdown"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6948FE78AA5F84CEC34872177A2B57E5 /* AMBDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMBDataStore.swift; path = AmbrosusSDK/AMBDataStore.swift; sourceTree = "<group>"; };
-		6CBB3B6FFDB0D6C65D878E79DF2DC893 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6CBB3B6FFDB0D6C65D878E79DF2DC893 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6F2F5CC4251DE1E983044D1EE717564E /* Pods-AmbrosusViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmbrosusViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		768A4B3975D588E9657BA154D7131573 /* Pods-AmbrosusViewer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AmbrosusViewer-umbrella.h"; sourceTree = "<group>"; };
 		8931F9E96B9B378B075820CE2247F041 /* AMBModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMBModels.swift; path = AmbrosusSDK/AMBModels.swift; sourceTree = "<group>"; };
-		92D1BA2BE203E040B52C108F8C0C2482 /* AmbrosusSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AmbrosusSDK.framework; path = AmbrosusSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		92D1BA2BE203E040B52C108F8C0C2482 /* AmbrosusSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmbrosusSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AA20AC0C06312D779B840E6B3402CCD7 /* AmbrosusSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AmbrosusSDK.modulemap; sourceTree = "<group>"; };
-		AC16070616CBB0CBAD7D49A3C78A5BA4 /* Pods_AmbrosusViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AmbrosusViewer.framework; path = "Pods-AmbrosusViewer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC16070616CBB0CBAD7D49A3C78A5BA4 /* Pods_AmbrosusViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmbrosusViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B510FDEBD408B63AC3F26D258D8BE513 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCFF4C546189B22A50C8B66EAEDF98A6 /* AmbrosusSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AmbrosusSDK-prefix.pch"; sourceTree = "<group>"; };
-		CEA56CEF2A8ECE993DADCB3A5AA618C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		CEA56CEF2A8ECE993DADCB3A5AA618C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		CEE61194AD7AA78F725A1D2DF68AEB98 /* Pods-AmbrosusViewer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AmbrosusViewer.modulemap"; sourceTree = "<group>"; };
 		D046357DD71667B3427C47F6B26DDB5A /* AmbrosusSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AmbrosusSDK.xcconfig; sourceTree = "<group>"; };
 		D59804DF6391EF5B50941B2BB2E7D3AE /* AmbrosusSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AmbrosusSDK-umbrella.h"; sourceTree = "<group>"; };

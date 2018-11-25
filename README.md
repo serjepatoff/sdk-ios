@@ -133,14 +133,7 @@ NSString *assetId = @"0x602023f73ab25f0c95a3cf4e92c9cb2f4c9c09dbd3ca6e167d362de6
 # Sample Application (Ambrosus Viewer)
 
 The included example application, Ambrosus Viewer includes a scanner that is capable of scanning 1d and 2d codes and displaying details about an associated asset and its events from AMB-NET. It comes packaged with several sample assets and events as well. The app also contains Asset Details and Event Details screens which demonstrate using the SDK to build a fully featured iOS application for viewing data stored on AMB-NET.
-
-To use the scanner in the Ambrosus Viewer you need a [Scandit](https://scandit.com) API key, you can sign up for a 30 day trial here:
-https://ssl.scandit.com/customers/new?p=test  
-
-The key can be replaced inside the `AppDelegate.swift` on line 27:
-```swift
-let scanditAppKey = "[YOUR SCANDIT KEY HERE]"
-```
+This fork uses freeware QRCodeReader.swift for 2D/3D barcode scanning instead of commercial barcode SDK
 
 ## Ambrosus Viewer Support
 

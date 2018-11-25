@@ -41,9 +41,6 @@
 		0A35995A20BF704D001AE36F /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A35993620BF704D001AE36F /* ScanViewController.swift */; };
 		3A6501E854914783EF6EDBF1 /* Pods_AmbrosusViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE8E7EF491A52C1B578182CE /* Pods_AmbrosusViewer.framework */; };
 		6A4A0E5320C3662500DB803D /* SampleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A4A0E5220C3662500DB803D /* SampleFetcher.swift */; };
-		6A79BC2D20684D2A0096E68F /* LICENSE-2.0.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A79BC2A20684D2A0096E68F /* LICENSE-2.0.txt */; };
-		6A79BC2E20684D2A0096E68F /* CHANGELOG.txt in Resources */ = {isa = PBXBuildFile; fileRef = 6A79BC2B20684D2A0096E68F /* CHANGELOG.txt */; };
-		6A79BC2F20684D2A0096E68F /* ScanditBarcodeScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79BC2C20684D2A0096E68F /* ScanditBarcodeScanner.framework */; };
 		6A79BC3120684D3D0096E68F /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79BC3020684D3D0096E68F /* MediaPlayer.framework */; };
 		6A79BC3320684D450096E68F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79BC3220684D440096E68F /* SystemConfiguration.framework */; };
 		6A79BC3520684D4D0096E68F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A79BC3420684D4D0096E68F /* QuartzCore.framework */; };
@@ -98,9 +95,6 @@
 		607FACD01AFB9204008FA782 /* AmbrosusViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbrosusViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A4A0E5220C3662500DB803D /* SampleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleFetcher.swift; sourceTree = "<group>"; };
 		6A5490180ED09ECFD3C82281 /* AmbrosusSDK.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AmbrosusSDK.podspec; path = ../AmbrosusSDK.podspec; sourceTree = "<group>"; };
-		6A79BC2A20684D2A0096E68F /* LICENSE-2.0.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "LICENSE-2.0.txt"; sourceTree = "<group>"; };
-		6A79BC2B20684D2A0096E68F /* CHANGELOG.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.txt; sourceTree = "<group>"; };
-		6A79BC2C20684D2A0096E68F /* ScanditBarcodeScanner.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ScanditBarcodeScanner.framework; sourceTree = "<group>"; };
 		6A79BC3020684D3D0096E68F /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		6A79BC3220684D440096E68F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		6A79BC3420684D4D0096E68F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -141,7 +135,6 @@
 				6A79BC3520684D4D0096E68F /* QuartzCore.framework in Frameworks */,
 				6A79BC3320684D450096E68F /* SystemConfiguration.framework in Frameworks */,
 				6A79BC3120684D3D0096E68F /* MediaPlayer.framework in Frameworks */,
-				6A79BC2F20684D2A0096E68F /* ScanditBarcodeScanner.framework in Frameworks */,
 				3A6501E854914783EF6EDBF1 /* Pods_AmbrosusViewer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,7 +245,6 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				6A79BC2920684D2A0096E68F /* ScanditSDK */,
 				0A35990820BF704D001AE36F /* App */,
 				607FACD11AFB9204008FA782 /* Products */,
 				757CCF2A5EF08F55B8B5C36C /* Frameworks */,
@@ -276,16 +268,6 @@
 				A070266F8FAE476168873E7F /* LICENSE */,
 			);
 			name = "Podspec Metadata";
-			sourceTree = "<group>";
-		};
-		6A79BC2920684D2A0096E68F /* ScanditSDK */ = {
-			isa = PBXGroup;
-			children = (
-				6A79BC2A20684D2A0096E68F /* LICENSE-2.0.txt */,
-				6A79BC2B20684D2A0096E68F /* CHANGELOG.txt */,
-				6A79BC2C20684D2A0096E68F /* ScanditBarcodeScanner.framework */,
-			);
-			path = ScanditSDK;
 			sourceTree = "<group>";
 		};
 		757CCF2A5EF08F55B8B5C36C /* Frameworks */ = {
@@ -344,7 +326,7 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						DevelopmentTeam = N3K2N7UN59;
+						DevelopmentTeam = NFR662M8WN;
 						LastSwiftMigration = 0920;
 					};
 				};
@@ -373,11 +355,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A35995520BF704D001AE36F /* PharmacyAsset2.json in Resources */,
-				6A79BC2E20684D2A0096E68F /* CHANGELOG.txt in Resources */,
 				0A35995620BF704D001AE36F /* PharmacyEvents.json in Resources */,
 				0A35994D20BF704D001AE36F /* Images.xcassets in Resources */,
 				0A35994720BF704D001AE36F /* LaunchScreen.storyboard in Resources */,
-				6A79BC2D20684D2A0096E68F /* LICENSE-2.0.txt in Resources */,
 				0A35994620BF704D001AE36F /* TitleInfoView.xib in Resources */,
 				0A35994820BF704D001AE36F /* Main.storyboard in Resources */,
 				0A35995220BF704D001AE36F /* CowAsset.json in Resources */,
@@ -589,16 +569,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 40;
-				DEVELOPMENT_TEAM = N3K2N7UN59;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ScanditSDK",
-				);
+				DEVELOPMENT_TEAM = NFR662M8WN;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ambrosus.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serje.ambrosusexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "App/AmbrosusViewer-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -616,16 +593,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 40;
-				DEVELOPMENT_TEAM = N3K2N7UN59;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/ScanditSDK",
-				);
+				DEVELOPMENT_TEAM = NFR662M8WN;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = "$(SRCROOT)/App/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
-				PRODUCT_BUNDLE_IDENTIFIER = com.ambrosus.example;
+				PRODUCT_BUNDLE_IDENTIFIER = com.serje.ambrosusexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "App/AmbrosusViewer-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
