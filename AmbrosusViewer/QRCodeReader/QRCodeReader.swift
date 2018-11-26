@@ -54,17 +54,15 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
   }()
 
   lazy var defaultDeviceInput: AVCaptureDeviceInput? = {
-    guard let defaultDevice = defaultDevice else { return nil }
-
-    return try? AVCaptureDeviceInput(device: defaultDevice)
+    guard let device = self.defaultDevice else { return nil }
+    safeConfigureAutoFocus(for: device)
+    return try? AVCaptureDeviceInput(device: device)
   }()
 
   lazy var frontDeviceInput: AVCaptureDeviceInput? = {
-    if let _frontDevice = self.frontDevice {
-      return try? AVCaptureDeviceInput(device: _frontDevice)
-    }
-
-    return nil
+    guard let device = self.frontDevice else { return nil }
+    safeConfigureAutoFocus(for: device)
+    return try? AVCaptureDeviceInput(device: device)
   }()
 
   public var metadataOutput = AVCaptureMetadataOutput()
@@ -141,6 +139,9 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
     for output in session.outputs {
       session.removeOutput(output)
     }
+    
+    session.sessionPreset = .high
+    
     for input in session.inputs {
       session.removeInput(input)
     }
@@ -171,6 +172,19 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
 
     session.commitConfiguration()
   }
+    
+    private func safeConfigureAutoFocus(for device: AVCaptureDevice) {
+        try! device.lockForConfiguration()
+        if (device.isFocusModeSupported(.continuousAutoFocus)) {
+            device.focusMode = .continuousAutoFocus
+        }
+        
+        if (device.isAutoFocusRangeRestrictionSupported) {
+            device.autoFocusRangeRestriction = .near
+        }
+        
+        device.unlockForConfiguration()
+    }
 
   /// Switch between the back and the front camera.
   @discardableResult
