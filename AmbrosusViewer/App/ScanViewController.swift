@@ -15,7 +15,6 @@
 import UIKit
 import AmbrosusSDK
 import AVFoundation
-import QRCodeReader
 
 final class ScanDataFormatter {
     func translateSymbology(from avFoundationRepresentation: String) -> String {

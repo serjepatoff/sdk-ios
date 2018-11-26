@@ -53,7 +53,13 @@ class ModalMessageView: UIView {
             messageView.removeFromSuperview()
         }
         view.addSubview(self)
-        topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        
+        if #available(iOS 11.0, *) {
+            topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        } else {
+            topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        }
+        
         leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         widthAnchor.constraint(equalToConstant: Interface.screenWidth).isActive = true
         animateInView()
