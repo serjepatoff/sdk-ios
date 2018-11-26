@@ -437,10 +437,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-AmbrosusViewer/Pods-AmbrosusViewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AmbrosusSDK/AmbrosusSDK.framework",
+				"${BUILT_PRODUCTS_DIR}/TrustKit/TrustKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AmbrosusSDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TrustKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

@@ -221,7 +221,7 @@ extension ScanViewController: QRCodeReaderViewControllerDelegate {
         // If there is no symbology string the query is an id
         if symbologyShort == "qrcode" && !query.contains(symbologyShort) {
 
-            AMBNetwork.requestAsset(fromId: query, completion: { (asset) in
+            AMBNetwork.sharedInstance.requestAsset(fromId: query, completion: { (asset) in
                 guard let asset = asset else {
                     self.presentAssetScanFailureAlert(with: picker, symbology: symbologyAVF, query: query)
                     return
@@ -231,14 +231,14 @@ extension ScanViewController: QRCodeReaderViewControllerDelegate {
                 return
             })
         } else {
-            AMBNetwork.requestEvents(fromQuery: query, completion: { (events) in
+            AMBNetwork.sharedInstance.requestEvents(fromQuery: query, completion: { (events) in
                 guard let events = events,
                     let assetId = events.first?.assetId else {
                         self.presentAssetScanFailureAlert(with: picker, symbology: symbologyAVF, query: query)
                         return
                 }
                 AMBDataStore.sharedInstance.eventStore.insert(events)
-                AMBNetwork.requestAsset(fromId: assetId, completion: { (asset) in
+                AMBNetwork.sharedInstance.requestAsset(fromId: assetId, completion: { (asset) in
                     guard let asset = asset else {
                         self.presentAssetScanFailureAlert(with: picker, symbology: symbologyAVF, query: query)
                         return

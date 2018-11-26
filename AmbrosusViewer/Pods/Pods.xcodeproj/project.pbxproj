@@ -7,65 +7,204 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4AD03B3024342629F258B2D81A3CC64A /* AmbrosusSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D393F7DEAA2BA5719F2623569B6470 /* AmbrosusSDK-dummy.m */; };
-		4ECE500AF5417A4A3DFAAF2B4A3B0091 /* Pods-AmbrosusViewer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D49659B43112AD038C19E673AE157 /* Pods-AmbrosusViewer-dummy.m */; };
-		666C61660C3C613039BE597DC9E01B5E /* AMBModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931F9E96B9B378B075820CE2247F041 /* AMBModels.swift */; };
-		68CA7A937C5CF6A6DAE01776D9597C19 /* AMBNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26228E53F17609CAA5233FBF01550360 /* AMBNetwork.swift */; };
-		9AF5AF5F29658E7EAA892FD1D7184E16 /* Pods-AmbrosusViewer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 768A4B3975D588E9657BA154D7131573 /* Pods-AmbrosusViewer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C73A0359FFC1CCD93D1103141478A47B /* AmbrosusSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D59804DF6391EF5B50941B2BB2E7D3AE /* AmbrosusSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F672312BC0B46BEBD9AABC1327E04AB6 /* AMBDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6948FE78AA5F84CEC34872177A2B57E5 /* AMBDataStore.swift */; };
+		024675097A7AB5FD5BA9F66515623230 /* trie_search.c in Sources */ = {isa = PBXBuildFile; fileRef = BC723F948B31633A335E7BAFD536A16D /* trie_search.c */; };
+		073EF68243195423CE12C85F9FA77595 /* TSKPinningValidatorCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = D171C6F9A20E90AC48A3CC3CD5F5A6BC /* TSKPinningValidatorCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0DCEA4864A68DEBC7FFC19F5AF64F17E /* TSKTrustKitConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D017C808782DFF4C5B96CA6C4C698F1 /* TSKTrustKitConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F4BBDEF2CCA6B44FA2157B0A512EDBD /* AMBModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8931F9E96B9B378B075820CE2247F041 /* AMBModels.swift */; };
+		12AA256786F9F4847BD64981DA4DA768 /* TSKTrustDecision.h in Headers */ = {isa = PBXBuildFile; fileRef = 405C09800EAB6F62CE7EF2FA4A6407FA /* TSKTrustDecision.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1467751C19CD4C9D48DDA139A5A15E6D /* TSKBackgroundReporter.h in Headers */ = {isa = PBXBuildFile; fileRef = 49A66A26CDC1D5A760A1F735491C4BCC /* TSKBackgroundReporter.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		282925EEB2B5DB957871B0BB8245ABC9 /* reporting_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 72791083D17752F85929D4BA75D05BF5 /* reporting_utils.m */; };
+		2BF5BE2CF9A917B8E7B5A6448AC87C50 /* TrustKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 93BA0A79A40485669DCD594E46B5AF5D /* TrustKit-dummy.m */; };
+		31998E852749177DBBFA9C29E142105D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E7980F6947530FFB4630C76E8BE41C3 /* Security.framework */; };
+		345A174FCB3BC144FDF946A9F7B2F9AB /* trie_node.h in Headers */ = {isa = PBXBuildFile; fileRef = 77CBE5001977BEB536B20488AB74C534 /* trie_node.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3736E82239736F1BBB521799F680133A /* Pods-AmbrosusViewer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 768A4B3975D588E9657BA154D7131573 /* Pods-AmbrosusViewer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F5DEA2145ED9A74301EE4589D81DD0A /* tsk_assert.h in Headers */ = {isa = PBXBuildFile; fileRef = 205276CABA76FA8D605638F2B542FE27 /* tsk_assert.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		40D0BB16202E8F8107D369FB2B6DEBEC /* TrustKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5546A4AEF9EF870E873DCA65E2280A13 /* TrustKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4482A236B7CD159E3CEB2B80FC7FF9F5 /* TSKPinFailureReport.h in Headers */ = {isa = PBXBuildFile; fileRef = F9EFD7A575ABAFEF4F4D83515C80C379 /* TSKPinFailureReport.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4621D21D2A0F7DF476C1BB483705F0D2 /* string_util.h in Headers */ = {isa = PBXBuildFile; fileRef = DC9D7BBE9913083742F559824BFB027F /* string_util.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46B23B6BEB8C85D5AD30C7B773BF180C /* RSSwizzle.h in Headers */ = {isa = PBXBuildFile; fileRef = BF44A85EC164CD723A86F38EF4DC3C2C /* RSSwizzle.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4ED96C646650EA5AFE6A3463D19F73CB /* TSKPinningValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = F83D4C1D1BA12E44DFD9DFC5456125FE /* TSKPinningValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F8DC5B6DFF92E10AC049238A25F8259 /* parse_configuration.m in Sources */ = {isa = PBXBuildFile; fileRef = A634B26E9D2C2381A829009E9018801D /* parse_configuration.m */; };
+		4FE1ECEF092CF0A321A10F940574611E /* TSKNSURLConnectionDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 012005579D4C1313F66BF84D5BFD76FA /* TSKNSURLConnectionDelegateProxy.m */; };
+		4FEDE8E5A43A311EB3AA4D3F9C471681 /* TSKNSURLSessionDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 464D1DF77E9D59F341E3FFD0AD964883 /* TSKNSURLSessionDelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		54CFD9F7028475852220CC3121082CB6 /* AMBDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6948FE78AA5F84CEC34872177A2B57E5 /* AMBDataStore.swift */; };
+		553E0250B6524B1DBEECE42C26FD59D4 /* init_registry_tables.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E68F561EF55848C6792B4894FFDE14A /* init_registry_tables.c */; };
+		593064695BB5114701A016A9646DE7A6 /* TrustKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 42F4C58D09F7B8561902DCB902406DEC /* TrustKit.m */; };
+		5EFE6AF7E484BFA1CFB2D7ED8732C27D /* TSKLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 2924D753F081C44043354483248A352C /* TSKLog.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		60EDBCC1173CEF14C1329512ECDC1B84 /* TSKReportsRateLimiter.m in Sources */ = {isa = PBXBuildFile; fileRef = 893001CB127C34E07DE07ACA3E3DCCDA /* TSKReportsRateLimiter.m */; };
+		61B3F37DFA80712BB52AD578CB25115B /* RSSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6ED48CB9B26E466EE5A6F6703A851123 /* RSSwizzle.m */; };
+		628ED3C4D074DEC7AEF95C019ED43B2E /* AmbrosusSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3D393F7DEAA2BA5719F2623569B6470 /* AmbrosusSDK-dummy.m */; };
+		6337753AE204A673BEBD7D2BD199DE49 /* AmbrosusSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D59804DF6391EF5B50941B2BB2E7D3AE /* AmbrosusSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C25B65E5DD409846E134FF85E3B2BCE /* ssl_pin_verifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 8429D87B5DD1DD8559278842BE348D3E /* ssl_pin_verifier.m */; };
+		6FE24061527877871C58590AF0FD3E12 /* trie_search.h in Headers */ = {isa = PBXBuildFile; fileRef = DC1D95B24164F08F45207CF9C7E07B30 /* trie_search.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		703D134BF1F324581985A6D8C06D0792 /* TSKPinningValidatorResult.m in Sources */ = {isa = PBXBuildFile; fileRef = FE6F3D883E836FDD45154FC087F8BA67 /* TSKPinningValidatorResult.m */; };
+		7A4122427603C9AD54119BA0A0F9295A /* TSKSPKIHashCache.m in Sources */ = {isa = PBXBuildFile; fileRef = A26A093050CECF57A8F9424E1A7A2328 /* TSKSPKIHashCache.m */; };
+		7F6DCACE3749839BD0802FEC3D93BF5B /* configuration_utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D1112540449EFE7AE19FA5CEC80A468 /* configuration_utils.m */; };
+		82F09BF3F1D77C87F970FBF726B31609 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE7E9317667A8E18C7DD2A83956D002 /* Foundation.framework */; };
+		840FF6DE686FEDB275A935628C49FD45 /* TrustKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 8ADFA990E175F977114DC35B8E8F86C7 /* TrustKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		86592DCE54DE299698059F8AADB110B7 /* reporting_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 76F4802FEF2568E10A7848CBBB4BBF69 /* reporting_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		90C9F68DCAB208DDF65846B417F7DFFA /* TSKSPKIHashCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 20B6C3514A5631E0D984DCCFB6134376 /* TSKSPKIHashCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		95F4CB07A705F01C123EDA4B5D83821F /* TSKPublicKeyAlgorithm.h in Headers */ = {isa = PBXBuildFile; fileRef = 126EFD26821A15B975C33E9D822F9504 /* TSKPublicKeyAlgorithm.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9602F4982B36EAEB521D5C7C89E3ED42 /* TSKNSURLSessionDelegateProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9C0537D28682D86FCEA6A0E52B4531E /* TSKNSURLSessionDelegateProxy.m */; };
+		98A25FF3F606B7B1825BA9DA57C7CC96 /* vendor_identifier.h in Headers */ = {isa = PBXBuildFile; fileRef = E922B016DA3951C908817E0197D88629 /* vendor_identifier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9BCD49092D0106E244A59F4C6A8BF265 /* registry_types.h in Headers */ = {isa = PBXBuildFile; fileRef = AE3D24EE688E04CF37EE40F7A05A89C6 /* registry_types.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9F10A96EEBF9A551E2F4BEC18A812869 /* TSKTrustKitConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2348252A72D4071A27BEDEC901B5F6F5 /* TSKTrustKitConfig.m */; };
+		A318592ED264C2560A58EA591C317790 /* vendor_identifier.m in Sources */ = {isa = PBXBuildFile; fileRef = E45B203966CFD841675F7CCF894825F4 /* vendor_identifier.m */; };
+		A35448394E0AE05BEB05B43656EA3D0F /* TSKPinningValidatorResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BC858F16F234251942565F9DF5E28B4 /* TSKPinningValidatorResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A75C2D0972548CCBBA9609B221642503 /* TSKPinFailureReport.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B46E4497F70DCB890D7E15F15FBD4F5 /* TSKPinFailureReport.m */; };
+		A7A9C869D576A53592F9350EA14E7BDC /* domain_registry.h in Headers */ = {isa = PBXBuildFile; fileRef = 460516F3E8905A8CD438F5A211C65975 /* domain_registry.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C11CF768C758CA824C64A3DDCF8356FE /* TSKBackgroundReporter.m in Sources */ = {isa = PBXBuildFile; fileRef = AAB115BC947A321887AB80F54CC30D48 /* TSKBackgroundReporter.m */; };
+		C13F39E5A943AB9D3CE6EF558AE7E2EF /* registry_search.c in Sources */ = {isa = PBXBuildFile; fileRef = DDA9795F9C9C9E734E5C381C1607C307 /* registry_search.c */; };
+		C195F3D168BED720C6A823E204AAA266 /* registry_tables.h in Headers */ = {isa = PBXBuildFile; fileRef = A64CAC1AD00D795BDD86703E1A45D680 /* registry_tables.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C8299123C886313246BC59A73304546A /* parse_configuration.h in Headers */ = {isa = PBXBuildFile; fileRef = BB8305AC3A9D282F39D454A1612E9C9F /* parse_configuration.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D00D2F5CFE688E38FA79109FB8A1C897 /* TrustKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01600BA9E8B289DBCE248630C0EDBC5B /* TrustKit.framework */; };
+		D28D2EF9F5706AE4D8BB3CA5F7EFA26E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE7E9317667A8E18C7DD2A83956D002 /* Foundation.framework */; };
+		D4B2E6DF2FCBE6B4695B5BA2924BD6BE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AE7E9317667A8E18C7DD2A83956D002 /* Foundation.framework */; };
+		D6744DB0CC72E59B7BDD9ACDABA8C529 /* Pods-AmbrosusViewer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C3D49659B43112AD038C19E673AE157 /* Pods-AmbrosusViewer-dummy.m */; };
+		D8F34E4BE1C450CE427C53A4A127F517 /* AMBNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26228E53F17609CAA5233FBF01550360 /* AMBNetwork.swift */; };
+		DAC0C634EB6AF2B60D049445975311BF /* TSKNSURLConnectionDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 61565941652DF797482C649290AE97A2 /* TSKNSURLConnectionDelegateProxy.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DD52EE4B1498D1939629B87C4C38AFC6 /* configuration_utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A6D90D984E432F8A8CD1623DAD5DD76 /* configuration_utils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		DEE24FEF90EB87F732E8B155A582AF8F /* TSKPinningValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C8BCDC44C2F3A291A2AD04E26D1838B /* TSKPinningValidator.m */; };
+		E1B2D48EA20A726FA913BA39E6F3C5C6 /* TSKPinningValidator_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 52F9F9D53A777A3F8913C01CCE11CD62 /* TSKPinningValidator_Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E4A9377541BCF746A39F44F09CBEDB9A /* ssl_pin_verifier.h in Headers */ = {isa = PBXBuildFile; fileRef = 562E8EE2CB87F9256BDA2C5E05086C27 /* ssl_pin_verifier.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E5704E359E1C961957785003EEC2442C /* tsk_assert.c in Sources */ = {isa = PBXBuildFile; fileRef = 8C1BD05A962D338C4DD7BD979A3FEB31 /* tsk_assert.c */; };
+		EAF8AD50A1353CA964FBE4D7660793CD /* TSKReportsRateLimiter.h in Headers */ = {isa = PBXBuildFile; fileRef = F15A3CF44296172A5BC3DB722FA15D40 /* TSKReportsRateLimiter.h */; settings = {ATTRIBUTES = (Project, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		846AAC6B25A1D1BDC93E5E050B190C88 /* PBXContainerItemProxy */ = {
+		C512A635843BEB92EBE7B00C40B64F52 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D0FBCA92DB96BD21C86594A9AE86939A;
+			remoteGlobalIDString = AA2084FC5484BA2D3ADD1CBCCF47ED29;
+			remoteInfo = TrustKit;
+		};
+		DF76DB7AAA709F1B8B0ADE0DD4AB38ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B9F0466061242B6DE4ECD86039D44978;
 			remoteInfo = AmbrosusSDK;
+		};
+		EFA0B76018F8596C01134AA5F46D642C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA2084FC5484BA2D3ADD1CBCCF47ED29;
+			remoteInfo = TrustKit;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		17111B12032FD200321E47A6E215892E /* AmbrosusSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = AmbrosusSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		012005579D4C1313F66BF84D5BFD76FA /* TSKNSURLConnectionDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKNSURLConnectionDelegateProxy.m; path = TrustKit/Swizzling/TSKNSURLConnectionDelegateProxy.m; sourceTree = "<group>"; };
+		01600BA9E8B289DBCE248630C0EDBC5B /* TrustKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = TrustKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D017C808782DFF4C5B96CA6C4C698F1 /* TSKTrustKitConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKTrustKitConfig.h; path = TrustKit/TSKTrustKitConfig.h; sourceTree = "<group>"; };
+		126EFD26821A15B975C33E9D822F9504 /* TSKPublicKeyAlgorithm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKPublicKeyAlgorithm.h; path = TrustKit/Pinning/TSKPublicKeyAlgorithm.h; sourceTree = "<group>"; };
+		14B7FA0A0586AC53E6B6C1EF5861D360 /* TrustKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TrustKit.xcconfig; sourceTree = "<group>"; };
+		17111B12032FD200321E47A6E215892E /* AmbrosusSDK.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = AmbrosusSDK.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		1BC858F16F234251942565F9DF5E28B4 /* TSKPinningValidatorResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKPinningValidatorResult.h; path = TrustKit/TSKPinningValidatorResult.h; sourceTree = "<group>"; };
+		1E68F561EF55848C6792B4894FFDE14A /* init_registry_tables.c */ = {isa = PBXFileReference; includeInIndex = 1; name = init_registry_tables.c; path = TrustKit/Dependencies/domain_registry/private/init_registry_tables.c; sourceTree = "<group>"; };
+		205276CABA76FA8D605638F2B542FE27 /* tsk_assert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = tsk_assert.h; path = TrustKit/Dependencies/domain_registry/private/tsk_assert.h; sourceTree = "<group>"; };
+		20B6C3514A5631E0D984DCCFB6134376 /* TSKSPKIHashCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKSPKIHashCache.h; path = TrustKit/Pinning/TSKSPKIHashCache.h; sourceTree = "<group>"; };
+		21B81F0636709212BF425898FCB413AE /* TrustKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TrustKit.modulemap; sourceTree = "<group>"; };
+		2348252A72D4071A27BEDEC901B5F6F5 /* TSKTrustKitConfig.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKTrustKitConfig.m; path = TrustKit/TSKTrustKitConfig.m; sourceTree = "<group>"; };
 		26228E53F17609CAA5233FBF01550360 /* AMBNetwork.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMBNetwork.swift; path = AmbrosusSDK/AMBNetwork.swift; sourceTree = "<group>"; };
 		2870FED1C03BF9859FC713FE8BB60A25 /* Pods-AmbrosusViewer-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AmbrosusViewer-resources.sh"; sourceTree = "<group>"; };
+		2924D753F081C44043354483248A352C /* TSKLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKLog.h; path = TrustKit/TSKLog.h; sourceTree = "<group>"; };
+		2B46E4497F70DCB890D7E15F15FBD4F5 /* TSKPinFailureReport.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKPinFailureReport.m; path = TrustKit/Reporting/TSKPinFailureReport.m; sourceTree = "<group>"; };
+		369D4C6E32B08F74EDE5C58D803E2D29 /* TrustKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TrustKit.framework; path = TrustKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		386B2F3A92529204D17310761819CC34 /* Pods-AmbrosusViewer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AmbrosusViewer-frameworks.sh"; sourceTree = "<group>"; };
+		3A6D90D984E432F8A8CD1623DAD5DD76 /* configuration_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = configuration_utils.h; path = TrustKit/configuration_utils.h; sourceTree = "<group>"; };
+		3C8BCDC44C2F3A291A2AD04E26D1838B /* TSKPinningValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKPinningValidator.m; path = TrustKit/TSKPinningValidator.m; sourceTree = "<group>"; };
+		405C09800EAB6F62CE7EF2FA4A6407FA /* TSKTrustDecision.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKTrustDecision.h; path = TrustKit/TSKTrustDecision.h; sourceTree = "<group>"; };
+		407EBFD8569BB136494166F5E6741A44 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F4C58D09F7B8561902DCB902406DEC /* TrustKit.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TrustKit.m; path = TrustKit/TrustKit.m; sourceTree = "<group>"; };
+		460516F3E8905A8CD438F5A211C65975 /* domain_registry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = domain_registry.h; path = TrustKit/Dependencies/domain_registry/domain_registry.h; sourceTree = "<group>"; };
+		464D1DF77E9D59F341E3FFD0AD964883 /* TSKNSURLSessionDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKNSURLSessionDelegateProxy.h; path = TrustKit/Swizzling/TSKNSURLSessionDelegateProxy.h; sourceTree = "<group>"; };
+		49A66A26CDC1D5A760A1F735491C4BCC /* TSKBackgroundReporter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKBackgroundReporter.h; path = TrustKit/Reporting/TSKBackgroundReporter.h; sourceTree = "<group>"; };
+		4AE7E9317667A8E18C7DD2A83956D002 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4E7980F6947530FFB4630C76E8BE41C3 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		52CC8B763348AA5C06FB6E354DEE826E /* TrustKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TrustKit-prefix.pch"; sourceTree = "<group>"; };
+		52F9F9D53A777A3F8913C01CCE11CD62 /* TSKPinningValidator_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKPinningValidator_Private.h; path = TrustKit/TSKPinningValidator_Private.h; sourceTree = "<group>"; };
 		538B10DC540BB2610F21CE2216230BCD /* Pods-AmbrosusViewer-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AmbrosusViewer-acknowledgements.plist"; sourceTree = "<group>"; };
+		5546A4AEF9EF870E873DCA65E2280A13 /* TrustKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TrustKit-umbrella.h"; sourceTree = "<group>"; };
+		562E8EE2CB87F9256BDA2C5E05086C27 /* ssl_pin_verifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ssl_pin_verifier.h; path = TrustKit/Pinning/ssl_pin_verifier.h; sourceTree = "<group>"; };
 		5C3D49659B43112AD038C19E673AE157 /* Pods-AmbrosusViewer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AmbrosusViewer-dummy.m"; sourceTree = "<group>"; };
 		60F857B310835011F9E9A00A06ACAA8B /* Pods-AmbrosusViewer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AmbrosusViewer-acknowledgements.markdown"; sourceTree = "<group>"; };
+		61565941652DF797482C649290AE97A2 /* TSKNSURLConnectionDelegateProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKNSURLConnectionDelegateProxy.h; path = TrustKit/Swizzling/TSKNSURLConnectionDelegateProxy.h; sourceTree = "<group>"; };
 		6948FE78AA5F84CEC34872177A2B57E5 /* AMBDataStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMBDataStore.swift; path = AmbrosusSDK/AMBDataStore.swift; sourceTree = "<group>"; };
-		6CBB3B6FFDB0D6C65D878E79DF2DC893 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		6CBB3B6FFDB0D6C65D878E79DF2DC893 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		6ED48CB9B26E466EE5A6F6703A851123 /* RSSwizzle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = RSSwizzle.m; path = TrustKit/Dependencies/RSSwizzle/RSSwizzle.m; sourceTree = "<group>"; };
 		6F2F5CC4251DE1E983044D1EE717564E /* Pods-AmbrosusViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmbrosusViewer.debug.xcconfig"; sourceTree = "<group>"; };
+		72791083D17752F85929D4BA75D05BF5 /* reporting_utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = reporting_utils.m; path = TrustKit/Reporting/reporting_utils.m; sourceTree = "<group>"; };
 		768A4B3975D588E9657BA154D7131573 /* Pods-AmbrosusViewer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AmbrosusViewer-umbrella.h"; sourceTree = "<group>"; };
+		76F4802FEF2568E10A7848CBBB4BBF69 /* reporting_utils.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = reporting_utils.h; path = TrustKit/Reporting/reporting_utils.h; sourceTree = "<group>"; };
+		77CBE5001977BEB536B20488AB74C534 /* trie_node.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = trie_node.h; path = TrustKit/Dependencies/domain_registry/private/trie_node.h; sourceTree = "<group>"; };
+		7D1112540449EFE7AE19FA5CEC80A468 /* configuration_utils.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = configuration_utils.m; path = TrustKit/configuration_utils.m; sourceTree = "<group>"; };
+		8429D87B5DD1DD8559278842BE348D3E /* ssl_pin_verifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ssl_pin_verifier.m; path = TrustKit/Pinning/ssl_pin_verifier.m; sourceTree = "<group>"; };
+		893001CB127C34E07DE07ACA3E3DCCDA /* TSKReportsRateLimiter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKReportsRateLimiter.m; path = TrustKit/Reporting/TSKReportsRateLimiter.m; sourceTree = "<group>"; };
 		8931F9E96B9B378B075820CE2247F041 /* AMBModels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMBModels.swift; path = AmbrosusSDK/AMBModels.swift; sourceTree = "<group>"; };
-		92D1BA2BE203E040B52C108F8C0C2482 /* AmbrosusSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AmbrosusSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8ADFA990E175F977114DC35B8E8F86C7 /* TrustKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TrustKit.h; path = TrustKit/TrustKit.h; sourceTree = "<group>"; };
+		8C1BD05A962D338C4DD7BD979A3FEB31 /* tsk_assert.c */ = {isa = PBXFileReference; includeInIndex = 1; name = tsk_assert.c; path = TrustKit/Dependencies/domain_registry/private/tsk_assert.c; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93BA0A79A40485669DCD594E46B5AF5D /* TrustKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TrustKit-dummy.m"; sourceTree = "<group>"; };
+		98E36F58277DB6DE0F41D8E068E09B79 /* Pods_AmbrosusViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_AmbrosusViewer.framework; path = "Pods-AmbrosusViewer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A26A093050CECF57A8F9424E1A7A2328 /* TSKSPKIHashCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKSPKIHashCache.m; path = TrustKit/Pinning/TSKSPKIHashCache.m; sourceTree = "<group>"; };
+		A27953C235B67FC0C8A9AB94FE7B5A5E /* AmbrosusSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AmbrosusSDK.framework; path = AmbrosusSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A634B26E9D2C2381A829009E9018801D /* parse_configuration.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = parse_configuration.m; path = TrustKit/parse_configuration.m; sourceTree = "<group>"; };
+		A64CAC1AD00D795BDD86703E1A45D680 /* registry_tables.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = registry_tables.h; path = TrustKit/Dependencies/domain_registry/registry_tables_genfiles/registry_tables.h; sourceTree = "<group>"; };
 		AA20AC0C06312D779B840E6B3402CCD7 /* AmbrosusSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AmbrosusSDK.modulemap; sourceTree = "<group>"; };
-		AC16070616CBB0CBAD7D49A3C78A5BA4 /* Pods_AmbrosusViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmbrosusViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAB115BC947A321887AB80F54CC30D48 /* TSKBackgroundReporter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKBackgroundReporter.m; path = TrustKit/Reporting/TSKBackgroundReporter.m; sourceTree = "<group>"; };
+		AE3D24EE688E04CF37EE40F7A05A89C6 /* registry_types.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = registry_types.h; path = TrustKit/Dependencies/domain_registry/private/registry_types.h; sourceTree = "<group>"; };
 		B510FDEBD408B63AC3F26D258D8BE513 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB8305AC3A9D282F39D454A1612E9C9F /* parse_configuration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = parse_configuration.h; path = TrustKit/parse_configuration.h; sourceTree = "<group>"; };
+		BC723F948B31633A335E7BAFD536A16D /* trie_search.c */ = {isa = PBXFileReference; includeInIndex = 1; name = trie_search.c; path = TrustKit/Dependencies/domain_registry/private/trie_search.c; sourceTree = "<group>"; };
 		BCFF4C546189B22A50C8B66EAEDF98A6 /* AmbrosusSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AmbrosusSDK-prefix.pch"; sourceTree = "<group>"; };
-		CEA56CEF2A8ECE993DADCB3A5AA618C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BF44A85EC164CD723A86F38EF4DC3C2C /* RSSwizzle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = RSSwizzle.h; path = TrustKit/Dependencies/RSSwizzle/RSSwizzle.h; sourceTree = "<group>"; };
+		C9C0537D28682D86FCEA6A0E52B4531E /* TSKNSURLSessionDelegateProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKNSURLSessionDelegateProxy.m; path = TrustKit/Swizzling/TSKNSURLSessionDelegateProxy.m; sourceTree = "<group>"; };
+		CEA56CEF2A8ECE993DADCB3A5AA618C1 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		CEE61194AD7AA78F725A1D2DF68AEB98 /* Pods-AmbrosusViewer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AmbrosusViewer.modulemap"; sourceTree = "<group>"; };
 		D046357DD71667B3427C47F6B26DDB5A /* AmbrosusSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AmbrosusSDK.xcconfig; sourceTree = "<group>"; };
+		D171C6F9A20E90AC48A3CC3CD5F5A6BC /* TSKPinningValidatorCallback.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKPinningValidatorCallback.h; path = TrustKit/TSKPinningValidatorCallback.h; sourceTree = "<group>"; };
 		D59804DF6391EF5B50941B2BB2E7D3AE /* AmbrosusSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AmbrosusSDK-umbrella.h"; sourceTree = "<group>"; };
+		DC1D95B24164F08F45207CF9C7E07B30 /* trie_search.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = trie_search.h; path = TrustKit/Dependencies/domain_registry/private/trie_search.h; sourceTree = "<group>"; };
+		DC9D7BBE9913083742F559824BFB027F /* string_util.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = string_util.h; path = TrustKit/Dependencies/domain_registry/private/string_util.h; sourceTree = "<group>"; };
 		DCC25F4CEB716989886E661D8C651E33 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDA9795F9C9C9E734E5C381C1607C307 /* registry_search.c */ = {isa = PBXFileReference; includeInIndex = 1; name = registry_search.c; path = TrustKit/Dependencies/domain_registry/private/registry_search.c; sourceTree = "<group>"; };
+		E45B203966CFD841675F7CCF894825F4 /* vendor_identifier.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = vendor_identifier.m; path = TrustKit/Reporting/vendor_identifier.m; sourceTree = "<group>"; };
+		E922B016DA3951C908817E0197D88629 /* vendor_identifier.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = vendor_identifier.h; path = TrustKit/Reporting/vendor_identifier.h; sourceTree = "<group>"; };
+		F15A3CF44296172A5BC3DB722FA15D40 /* TSKReportsRateLimiter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKReportsRateLimiter.h; path = TrustKit/Reporting/TSKReportsRateLimiter.h; sourceTree = "<group>"; };
 		F3D393F7DEAA2BA5719F2623569B6470 /* AmbrosusSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AmbrosusSDK-dummy.m"; sourceTree = "<group>"; };
+		F83D4C1D1BA12E44DFD9DFC5456125FE /* TSKPinningValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKPinningValidator.h; path = TrustKit/TSKPinningValidator.h; sourceTree = "<group>"; };
+		F9EFD7A575ABAFEF4F4D83515C80C379 /* TSKPinFailureReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TSKPinFailureReport.h; path = TrustKit/Reporting/TSKPinFailureReport.h; sourceTree = "<group>"; };
 		FD290501A0C2C75A67EDFBBBB22C9228 /* Pods-AmbrosusViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AmbrosusViewer.release.xcconfig"; sourceTree = "<group>"; };
+		FE6F3D883E836FDD45154FC087F8BA67 /* TSKPinningValidatorResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TSKPinningValidatorResult.m; path = TrustKit/TSKPinningValidatorResult.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F83E4CD54AE06D750D896AB235D31AE /* Frameworks */ = {
+		5808E28AF1FECE74101815F11AC2BAEA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4B2E6DF2FCBE6B4695B5BA2924BD6BE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D79F7E78FA4EFE8A050E8A46F5F9B9CC /* Frameworks */ = {
+		6C0E15A45794C45ECE78F65CF73CE196 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82F09BF3F1D77C87F970FBF726B31609 /* Foundation.framework in Frameworks */,
+				D00D2F5CFE688E38FA79109FB8A1C897 /* TrustKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBB6A605AF0F0157C359B5516E0132D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D28D2EF9F5706AE4D8BB3CA5F7EFA26E /* Foundation.framework in Frameworks */,
+				31998E852749177DBBFA9C29E142105D /* Security.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,15 +219,6 @@
 				6CBB3B6FFDB0D6C65D878E79DF2DC893 /* README.md */,
 			);
 			name = Pod;
-			sourceTree = "<group>";
-		};
-		27A1F67C69C0C811C9395FC18759B60C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				92D1BA2BE203E040B52C108F8C0C2482 /* AmbrosusSDK.framework */,
-				AC16070616CBB0CBAD7D49A3C78A5BA4 /* Pods_AmbrosusViewer.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		355000BFA488E663C14A59179B09FDE4 /* AmbrosusSDK */ = {
@@ -110,6 +240,14 @@
 				355000BFA488E663C14A59179B09FDE4 /* AmbrosusSDK */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		57D74F88A8661DC2F301AD069828C648 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E6C531E025AC48C226112957A865359 /* TrustKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		591173E68605F4BE7091C72796899AFD /* Pods-AmbrosusViewer */ = {
@@ -157,76 +295,225 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				4D00A718653FC66F67F3D253552C2015 /* Development Pods */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				27A1F67C69C0C811C9395FC18759B60C /* Products */,
+				AD12BAABE9E4C3FA7CFAEAAD2A694C58 /* Frameworks */,
+				57D74F88A8661DC2F301AD069828C648 /* Pods */,
+				C0E2CD9C04512961EAE649B71E78B34D /* Products */,
 				656E70C40D0C34423DA53CD0B07EFDBC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		9E6C531E025AC48C226112957A865359 /* TrustKit */ = {
 			isa = PBXGroup;
 			children = (
+				3A6D90D984E432F8A8CD1623DAD5DD76 /* configuration_utils.h */,
+				7D1112540449EFE7AE19FA5CEC80A468 /* configuration_utils.m */,
+				460516F3E8905A8CD438F5A211C65975 /* domain_registry.h */,
+				1E68F561EF55848C6792B4894FFDE14A /* init_registry_tables.c */,
+				BB8305AC3A9D282F39D454A1612E9C9F /* parse_configuration.h */,
+				A634B26E9D2C2381A829009E9018801D /* parse_configuration.m */,
+				DDA9795F9C9C9E734E5C381C1607C307 /* registry_search.c */,
+				A64CAC1AD00D795BDD86703E1A45D680 /* registry_tables.h */,
+				AE3D24EE688E04CF37EE40F7A05A89C6 /* registry_types.h */,
+				76F4802FEF2568E10A7848CBBB4BBF69 /* reporting_utils.h */,
+				72791083D17752F85929D4BA75D05BF5 /* reporting_utils.m */,
+				BF44A85EC164CD723A86F38EF4DC3C2C /* RSSwizzle.h */,
+				6ED48CB9B26E466EE5A6F6703A851123 /* RSSwizzle.m */,
+				562E8EE2CB87F9256BDA2C5E05086C27 /* ssl_pin_verifier.h */,
+				8429D87B5DD1DD8559278842BE348D3E /* ssl_pin_verifier.m */,
+				DC9D7BBE9913083742F559824BFB027F /* string_util.h */,
+				77CBE5001977BEB536B20488AB74C534 /* trie_node.h */,
+				BC723F948B31633A335E7BAFD536A16D /* trie_search.c */,
+				DC1D95B24164F08F45207CF9C7E07B30 /* trie_search.h */,
+				8ADFA990E175F977114DC35B8E8F86C7 /* TrustKit.h */,
+				42F4C58D09F7B8561902DCB902406DEC /* TrustKit.m */,
+				8C1BD05A962D338C4DD7BD979A3FEB31 /* tsk_assert.c */,
+				205276CABA76FA8D605638F2B542FE27 /* tsk_assert.h */,
+				49A66A26CDC1D5A760A1F735491C4BCC /* TSKBackgroundReporter.h */,
+				AAB115BC947A321887AB80F54CC30D48 /* TSKBackgroundReporter.m */,
+				2924D753F081C44043354483248A352C /* TSKLog.h */,
+				61565941652DF797482C649290AE97A2 /* TSKNSURLConnectionDelegateProxy.h */,
+				012005579D4C1313F66BF84D5BFD76FA /* TSKNSURLConnectionDelegateProxy.m */,
+				464D1DF77E9D59F341E3FFD0AD964883 /* TSKNSURLSessionDelegateProxy.h */,
+				C9C0537D28682D86FCEA6A0E52B4531E /* TSKNSURLSessionDelegateProxy.m */,
+				F9EFD7A575ABAFEF4F4D83515C80C379 /* TSKPinFailureReport.h */,
+				2B46E4497F70DCB890D7E15F15FBD4F5 /* TSKPinFailureReport.m */,
+				F83D4C1D1BA12E44DFD9DFC5456125FE /* TSKPinningValidator.h */,
+				3C8BCDC44C2F3A291A2AD04E26D1838B /* TSKPinningValidator.m */,
+				52F9F9D53A777A3F8913C01CCE11CD62 /* TSKPinningValidator_Private.h */,
+				D171C6F9A20E90AC48A3CC3CD5F5A6BC /* TSKPinningValidatorCallback.h */,
+				1BC858F16F234251942565F9DF5E28B4 /* TSKPinningValidatorResult.h */,
+				FE6F3D883E836FDD45154FC087F8BA67 /* TSKPinningValidatorResult.m */,
+				126EFD26821A15B975C33E9D822F9504 /* TSKPublicKeyAlgorithm.h */,
+				F15A3CF44296172A5BC3DB722FA15D40 /* TSKReportsRateLimiter.h */,
+				893001CB127C34E07DE07ACA3E3DCCDA /* TSKReportsRateLimiter.m */,
+				20B6C3514A5631E0D984DCCFB6134376 /* TSKSPKIHashCache.h */,
+				A26A093050CECF57A8F9424E1A7A2328 /* TSKSPKIHashCache.m */,
+				405C09800EAB6F62CE7EF2FA4A6407FA /* TSKTrustDecision.h */,
+				0D017C808782DFF4C5B96CA6C4C698F1 /* TSKTrustKitConfig.h */,
+				2348252A72D4071A27BEDEC901B5F6F5 /* TSKTrustKitConfig.m */,
+				E922B016DA3951C908817E0197D88629 /* vendor_identifier.h */,
+				E45B203966CFD841675F7CCF894825F4 /* vendor_identifier.m */,
+				EBBC9B79B1A8C53EC4553C8ECF1DAE73 /* Support Files */,
+			);
+			name = TrustKit;
+			path = TrustKit;
+			sourceTree = "<group>";
+		};
+		AD12BAABE9E4C3FA7CFAEAAD2A694C58 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01600BA9E8B289DBCE248630C0EDBC5B /* TrustKit.framework */,
+				B65200CA5D5EF7CAD8C754037C58E751 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B65200CA5D5EF7CAD8C754037C58E751 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				4AE7E9317667A8E18C7DD2A83956D002 /* Foundation.framework */,
+				4E7980F6947530FFB4630C76E8BE41C3 /* Security.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C0E2CD9C04512961EAE649B71E78B34D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A27953C235B67FC0C8A9AB94FE7B5A5E /* AmbrosusSDK.framework */,
+				98E36F58277DB6DE0F41D8E068E09B79 /* Pods_AmbrosusViewer.framework */,
+				369D4C6E32B08F74EDE5C58D803E2D29 /* TrustKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EBBC9B79B1A8C53EC4553C8ECF1DAE73 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				407EBFD8569BB136494166F5E6741A44 /* Info.plist */,
+				21B81F0636709212BF425898FCB413AE /* TrustKit.modulemap */,
+				14B7FA0A0586AC53E6B6C1EF5861D360 /* TrustKit.xcconfig */,
+				93BA0A79A40485669DCD594E46B5AF5D /* TrustKit-dummy.m */,
+				52CC8B763348AA5C06FB6E354DEE826E /* TrustKit-prefix.pch */,
+				5546A4AEF9EF870E873DCA65E2280A13 /* TrustKit-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/TrustKit";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2D6B27A1C246AFB8CA7012EBFA41E048 /* Headers */ = {
+		62F0613141B8E401BD4A15D35610D4A1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73A0359FFC1CCD93D1103141478A47B /* AmbrosusSDK-umbrella.h in Headers */,
+				6337753AE204A673BEBD7D2BD199DE49 /* AmbrosusSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FBE408ACBE6392FFF121AC917A9B6F4E /* Headers */ = {
+		A516AB0ED75AB8F6B413F2A45E764618 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AF5AF5F29658E7EAA892FD1D7184E16 /* Pods-AmbrosusViewer-umbrella.h in Headers */,
+				DD52EE4B1498D1939629B87C4C38AFC6 /* configuration_utils.h in Headers */,
+				A7A9C869D576A53592F9350EA14E7BDC /* domain_registry.h in Headers */,
+				C8299123C886313246BC59A73304546A /* parse_configuration.h in Headers */,
+				C195F3D168BED720C6A823E204AAA266 /* registry_tables.h in Headers */,
+				9BCD49092D0106E244A59F4C6A8BF265 /* registry_types.h in Headers */,
+				86592DCE54DE299698059F8AADB110B7 /* reporting_utils.h in Headers */,
+				46B23B6BEB8C85D5AD30C7B773BF180C /* RSSwizzle.h in Headers */,
+				E4A9377541BCF746A39F44F09CBEDB9A /* ssl_pin_verifier.h in Headers */,
+				4621D21D2A0F7DF476C1BB483705F0D2 /* string_util.h in Headers */,
+				345A174FCB3BC144FDF946A9F7B2F9AB /* trie_node.h in Headers */,
+				6FE24061527877871C58590AF0FD3E12 /* trie_search.h in Headers */,
+				40D0BB16202E8F8107D369FB2B6DEBEC /* TrustKit-umbrella.h in Headers */,
+				840FF6DE686FEDB275A935628C49FD45 /* TrustKit.h in Headers */,
+				3F5DEA2145ED9A74301EE4589D81DD0A /* tsk_assert.h in Headers */,
+				1467751C19CD4C9D48DDA139A5A15E6D /* TSKBackgroundReporter.h in Headers */,
+				5EFE6AF7E484BFA1CFB2D7ED8732C27D /* TSKLog.h in Headers */,
+				DAC0C634EB6AF2B60D049445975311BF /* TSKNSURLConnectionDelegateProxy.h in Headers */,
+				4FEDE8E5A43A311EB3AA4D3F9C471681 /* TSKNSURLSessionDelegateProxy.h in Headers */,
+				4482A236B7CD159E3CEB2B80FC7FF9F5 /* TSKPinFailureReport.h in Headers */,
+				4ED96C646650EA5AFE6A3463D19F73CB /* TSKPinningValidator.h in Headers */,
+				E1B2D48EA20A726FA913BA39E6F3C5C6 /* TSKPinningValidator_Private.h in Headers */,
+				073EF68243195423CE12C85F9FA77595 /* TSKPinningValidatorCallback.h in Headers */,
+				A35448394E0AE05BEB05B43656EA3D0F /* TSKPinningValidatorResult.h in Headers */,
+				95F4CB07A705F01C123EDA4B5D83821F /* TSKPublicKeyAlgorithm.h in Headers */,
+				EAF8AD50A1353CA964FBE4D7660793CD /* TSKReportsRateLimiter.h in Headers */,
+				90C9F68DCAB208DDF65846B417F7DFFA /* TSKSPKIHashCache.h in Headers */,
+				12AA256786F9F4847BD64981DA4DA768 /* TSKTrustDecision.h in Headers */,
+				0DCEA4864A68DEBC7FFC19F5AF64F17E /* TSKTrustKitConfig.h in Headers */,
+				98A25FF3F606B7B1825BA9DA57C7CC96 /* vendor_identifier.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C88FEF8A73A6CE92FEA418E747C83616 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3736E82239736F1BBB521799F680133A /* Pods-AmbrosusViewer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D0FBCA92DB96BD21C86594A9AE86939A /* AmbrosusSDK */ = {
+		4B50D877A1315F05A534F605FF5CA082 /* Pods-AmbrosusViewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81FCA8C6422AA51E08B6431AAC9F15A8 /* Build configuration list for PBXNativeTarget "AmbrosusSDK" */;
+			buildConfigurationList = 600ABEB53D467A6213B24EB475453EF8 /* Build configuration list for PBXNativeTarget "Pods-AmbrosusViewer" */;
 			buildPhases = (
-				2D6B27A1C246AFB8CA7012EBFA41E048 /* Headers */,
-				BAA12251036ABEF0CBCBD9932B4B8C2D /* Sources */,
-				D79F7E78FA4EFE8A050E8A46F5F9B9CC /* Frameworks */,
-				3892198AE0622D43BE7AA58CF02760F2 /* Resources */,
+				C88FEF8A73A6CE92FEA418E747C83616 /* Headers */,
+				78A128E6F2411FAA818B3849F9C036C3 /* Sources */,
+				5808E28AF1FECE74101815F11AC2BAEA /* Frameworks */,
+				58377C5DDC8836BE4DC78B8E9625E6E7 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = AmbrosusSDK;
-			productName = AmbrosusSDK;
-			productReference = 92D1BA2BE203E040B52C108F8C0C2482 /* AmbrosusSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		EC6A4FA5F128E7B2E808D9BEC38B9C31 /* Pods-AmbrosusViewer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 380B660F62132892C0C3081A843B92A7 /* Build configuration list for PBXNativeTarget "Pods-AmbrosusViewer" */;
-			buildPhases = (
-				FBE408ACBE6392FFF121AC917A9B6F4E /* Headers */,
-				6603AD21F5432FF8B2FE77F66A9BDCB0 /* Sources */,
-				2F83E4CD54AE06D750D896AB235D31AE /* Frameworks */,
-				F6D0C6E809A601E0E55ECD5B25E18CE6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C68D2439451C19263360F1EDD9A1F7C1 /* PBXTargetDependency */,
+				745638AA1C4E37F8054299E3F9D8743D /* PBXTargetDependency */,
+				F0ECB0ADE65BF9CB883E079BF536E128 /* PBXTargetDependency */,
 			);
 			name = "Pods-AmbrosusViewer";
 			productName = "Pods-AmbrosusViewer";
-			productReference = AC16070616CBB0CBAD7D49A3C78A5BA4 /* Pods_AmbrosusViewer.framework */;
+			productReference = 98E36F58277DB6DE0F41D8E068E09B79 /* Pods_AmbrosusViewer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		AA2084FC5484BA2D3ADD1CBCCF47ED29 /* TrustKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 786FCB156808CFE09248927AEE555596 /* Build configuration list for PBXNativeTarget "TrustKit" */;
+			buildPhases = (
+				A516AB0ED75AB8F6B413F2A45E764618 /* Headers */,
+				3BBA99857FB94693F90F0693618F7FEE /* Sources */,
+				FBB6A605AF0F0157C359B5516E0132D2 /* Frameworks */,
+				63692FB6A7778BE50513084184F2E1C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TrustKit;
+			productName = TrustKit;
+			productReference = 369D4C6E32B08F74EDE5C58D803E2D29 /* TrustKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B9F0466061242B6DE4ECD86039D44978 /* AmbrosusSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1C003443346816FF87876400DD9D192D /* Build configuration list for PBXNativeTarget "AmbrosusSDK" */;
+			buildPhases = (
+				62F0613141B8E401BD4A15D35610D4A1 /* Headers */,
+				340BFE17FE07BD8742F4B72BD8F5ABC2 /* Sources */,
+				6C0E15A45794C45ECE78F65CF73CE196 /* Frameworks */,
+				30B68B2A43A455FF600E95CFF0C23B3F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				804E57DEDC84D68803B415B3EB0F92BF /* PBXTargetDependency */,
+			);
+			name = AmbrosusSDK;
+			productName = AmbrosusSDK;
+			productReference = A27953C235B67FC0C8A9AB94FE7B5A5E /* AmbrosusSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -246,25 +533,33 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 27A1F67C69C0C811C9395FC18759B60C /* Products */;
+			productRefGroup = C0E2CD9C04512961EAE649B71E78B34D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D0FBCA92DB96BD21C86594A9AE86939A /* AmbrosusSDK */,
-				EC6A4FA5F128E7B2E808D9BEC38B9C31 /* Pods-AmbrosusViewer */,
+				B9F0466061242B6DE4ECD86039D44978 /* AmbrosusSDK */,
+				4B50D877A1315F05A534F605FF5CA082 /* Pods-AmbrosusViewer */,
+				AA2084FC5484BA2D3ADD1CBCCF47ED29 /* TrustKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		3892198AE0622D43BE7AA58CF02760F2 /* Resources */ = {
+		30B68B2A43A455FF600E95CFF0C23B3F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F6D0C6E809A601E0E55ECD5B25E18CE6 /* Resources */ = {
+		58377C5DDC8836BE4DC78B8E9625E6E7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63692FB6A7778BE50513084184F2E1C7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -274,38 +569,112 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		6603AD21F5432FF8B2FE77F66A9BDCB0 /* Sources */ = {
+		340BFE17FE07BD8742F4B72BD8F5ABC2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4ECE500AF5417A4A3DFAAF2B4A3B0091 /* Pods-AmbrosusViewer-dummy.m in Sources */,
+				54CFD9F7028475852220CC3121082CB6 /* AMBDataStore.swift in Sources */,
+				0F4BBDEF2CCA6B44FA2157B0A512EDBD /* AMBModels.swift in Sources */,
+				D8F34E4BE1C450CE427C53A4A127F517 /* AMBNetwork.swift in Sources */,
+				628ED3C4D074DEC7AEF95C019ED43B2E /* AmbrosusSDK-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAA12251036ABEF0CBCBD9932B4B8C2D /* Sources */ = {
+		3BBA99857FB94693F90F0693618F7FEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F672312BC0B46BEBD9AABC1327E04AB6 /* AMBDataStore.swift in Sources */,
-				666C61660C3C613039BE597DC9E01B5E /* AMBModels.swift in Sources */,
-				68CA7A937C5CF6A6DAE01776D9597C19 /* AMBNetwork.swift in Sources */,
-				4AD03B3024342629F258B2D81A3CC64A /* AmbrosusSDK-dummy.m in Sources */,
+				7F6DCACE3749839BD0802FEC3D93BF5B /* configuration_utils.m in Sources */,
+				553E0250B6524B1DBEECE42C26FD59D4 /* init_registry_tables.c in Sources */,
+				4F8DC5B6DFF92E10AC049238A25F8259 /* parse_configuration.m in Sources */,
+				C13F39E5A943AB9D3CE6EF558AE7E2EF /* registry_search.c in Sources */,
+				282925EEB2B5DB957871B0BB8245ABC9 /* reporting_utils.m in Sources */,
+				61B3F37DFA80712BB52AD578CB25115B /* RSSwizzle.m in Sources */,
+				6C25B65E5DD409846E134FF85E3B2BCE /* ssl_pin_verifier.m in Sources */,
+				024675097A7AB5FD5BA9F66515623230 /* trie_search.c in Sources */,
+				2BF5BE2CF9A917B8E7B5A6448AC87C50 /* TrustKit-dummy.m in Sources */,
+				593064695BB5114701A016A9646DE7A6 /* TrustKit.m in Sources */,
+				E5704E359E1C961957785003EEC2442C /* tsk_assert.c in Sources */,
+				C11CF768C758CA824C64A3DDCF8356FE /* TSKBackgroundReporter.m in Sources */,
+				4FE1ECEF092CF0A321A10F940574611E /* TSKNSURLConnectionDelegateProxy.m in Sources */,
+				9602F4982B36EAEB521D5C7C89E3ED42 /* TSKNSURLSessionDelegateProxy.m in Sources */,
+				A75C2D0972548CCBBA9609B221642503 /* TSKPinFailureReport.m in Sources */,
+				DEE24FEF90EB87F732E8B155A582AF8F /* TSKPinningValidator.m in Sources */,
+				703D134BF1F324581985A6D8C06D0792 /* TSKPinningValidatorResult.m in Sources */,
+				60EDBCC1173CEF14C1329512ECDC1B84 /* TSKReportsRateLimiter.m in Sources */,
+				7A4122427603C9AD54119BA0A0F9295A /* TSKSPKIHashCache.m in Sources */,
+				9F10A96EEBF9A551E2F4BEC18A812869 /* TSKTrustKitConfig.m in Sources */,
+				A318592ED264C2560A58EA591C317790 /* vendor_identifier.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78A128E6F2411FAA818B3849F9C036C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D6744DB0CC72E59B7BDD9ACDABA8C529 /* Pods-AmbrosusViewer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		C68D2439451C19263360F1EDD9A1F7C1 /* PBXTargetDependency */ = {
+		745638AA1C4E37F8054299E3F9D8743D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AmbrosusSDK;
-			target = D0FBCA92DB96BD21C86594A9AE86939A /* AmbrosusSDK */;
-			targetProxy = 846AAC6B25A1D1BDC93E5E050B190C88 /* PBXContainerItemProxy */;
+			target = B9F0466061242B6DE4ECD86039D44978 /* AmbrosusSDK */;
+			targetProxy = DF76DB7AAA709F1B8B0ADE0DD4AB38ED /* PBXContainerItemProxy */;
+		};
+		804E57DEDC84D68803B415B3EB0F92BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TrustKit;
+			target = AA2084FC5484BA2D3ADD1CBCCF47ED29 /* TrustKit */;
+			targetProxy = C512A635843BEB92EBE7B00C40B64F52 /* PBXContainerItemProxy */;
+		};
+		F0ECB0ADE65BF9CB883E079BF536E128 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TrustKit;
+			target = AA2084FC5484BA2D3ADD1CBCCF47ED29 /* TrustKit */;
+			targetProxy = EFA0B76018F8596C01134AA5F46D642C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		17E804DC1471F9B3BA0BE882AA9865AE /* Debug */ = {
+		1AF3BC81C5FE7B7DA8A324F13AC4818D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F2F5CC4251DE1E983044D1EE717564E /* Pods-AmbrosusViewer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AmbrosusViewer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AmbrosusViewer/Pods-AmbrosusViewer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1D39444D6DB02B50FE6D349EE4236EE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D046357DD71667B3427C47F6B26DDB5A /* AmbrosusSDK.xcconfig */;
 			buildSettings = {
@@ -337,9 +706,44 @@
 			};
 			name = Debug;
 		};
-		33F49FCEF34E9CB74ABD10DBB1D49FE0 /* Release */ = {
+		3DC646648588E4C02AC4D22E9F26FA31 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D046357DD71667B3427C47F6B26DDB5A /* AmbrosusSDK.xcconfig */;
+			baseConfigurationReference = FD290501A0C2C75A67EDFBBBB22C9228 /* Pods-AmbrosusViewer.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-AmbrosusViewer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AmbrosusViewer/Pods-AmbrosusViewer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		40CABF034EBA39586FB97F09524BB129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14B7FA0A0586AC53E6B6C1EF5861D360 /* TrustKit.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
@@ -351,14 +755,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/AmbrosusSDK/AmbrosusSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AmbrosusSDK/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/TrustKit/TrustKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TrustKit/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AmbrosusSDK/AmbrosusSDK.modulemap";
-				PRODUCT_MODULE_NAME = AmbrosusSDK;
-				PRODUCT_NAME = AmbrosusSDK;
+				MODULEMAP_FILE = "Target Support Files/TrustKit/TrustKit.modulemap";
+				PRODUCT_MODULE_NAME = TrustKit;
+				PRODUCT_NAME = TrustKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -370,7 +774,39 @@
 			};
 			name = Release;
 		};
-		BB044C4AFAC2A37F66D023639C0B5841 /* Debug */ = {
+		5905BFA00AA71B93CBDD41D7082ED12A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14B7FA0A0586AC53E6B6C1EF5861D360 /* TrustKit.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/TrustKit/TrustKit-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/TrustKit/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/TrustKit/TrustKit.modulemap";
+				PRODUCT_MODULE_NAME = TrustKit;
+				PRODUCT_NAME = TrustKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -436,11 +872,10 @@
 			};
 			name = Debug;
 		};
-		BC1540B99F497748D1D108CA62F0C8C5 /* Release */ = {
+		96B9637810AB60863BA17BFC86B72989 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FD290501A0C2C75A67EDFBBBB22C9228 /* Pods-AmbrosusViewer.release.xcconfig */;
+			baseConfigurationReference = D046357DD71667B3427C47F6B26DDB5A /* AmbrosusSDK.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -451,19 +886,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AmbrosusViewer/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AmbrosusSDK/AmbrosusSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AmbrosusSDK/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AmbrosusViewer/Pods-AmbrosusViewer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/AmbrosusSDK/AmbrosusSDK.modulemap";
+				PRODUCT_MODULE_NAME = AmbrosusSDK;
+				PRODUCT_NAME = AmbrosusSDK;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -471,7 +905,7 @@
 			};
 			name = Release;
 		};
-		C8F6AD84CD9EBD21EE14F83C2F3C21E0 /* Release */ = {
+		D5F759C82752B2EB010DB3CD3D69707C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -533,66 +967,41 @@
 			};
 			name = Release;
 		};
-		F1F3A7BB19D0BDA13AC6B1B3D4CADDB3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6F2F5CC4251DE1E983044D1EE717564E /* Pods-AmbrosusViewer.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AmbrosusViewer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AmbrosusViewer/Pods-AmbrosusViewer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1C003443346816FF87876400DD9D192D /* Build configuration list for PBXNativeTarget "AmbrosusSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D39444D6DB02B50FE6D349EE4236EE0 /* Debug */,
+				96B9637810AB60863BA17BFC86B72989 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				BB044C4AFAC2A37F66D023639C0B5841 /* Debug */,
-				C8F6AD84CD9EBD21EE14F83C2F3C21E0 /* Release */,
+				8DDFA5FA8D4131BFD96E5E26F3672644 /* Debug */,
+				D5F759C82752B2EB010DB3CD3D69707C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		380B660F62132892C0C3081A843B92A7 /* Build configuration list for PBXNativeTarget "Pods-AmbrosusViewer" */ = {
+		600ABEB53D467A6213B24EB475453EF8 /* Build configuration list for PBXNativeTarget "Pods-AmbrosusViewer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F1F3A7BB19D0BDA13AC6B1B3D4CADDB3 /* Debug */,
-				BC1540B99F497748D1D108CA62F0C8C5 /* Release */,
+				1AF3BC81C5FE7B7DA8A324F13AC4818D /* Debug */,
+				3DC646648588E4C02AC4D22E9F26FA31 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81FCA8C6422AA51E08B6431AAC9F15A8 /* Build configuration list for PBXNativeTarget "AmbrosusSDK" */ = {
+		786FCB156808CFE09248927AEE555596 /* Build configuration list for PBXNativeTarget "TrustKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				17E804DC1471F9B3BA0BE882AA9865AE /* Debug */,
-				33F49FCEF34E9CB74ABD10DBB1D49FE0 /* Release */,
+				5905BFA00AA71B93CBDD41D7082ED12A /* Debug */,
+				40CABF034EBA39586FB97F09524BB129 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

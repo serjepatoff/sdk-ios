@@ -90,7 +90,7 @@ final class AssetDetailCollectionViewController: UICollectionViewController {
                 return
             }
 
-            AMBNetwork.requestEvents(fromAssetId: asset.id) { (events) in
+            AMBNetwork.sharedInstance.requestEvents(fromAssetId: asset.id) { (events) in
                 let existingEvents = self.asset.events ?? [AMBEvent]()
                 if let events = events, !events.isEmpty && events.count > existingEvents.count  {
                     AMBDataStore.sharedInstance.eventStore.insert(events)
@@ -108,7 +108,7 @@ final class AssetDetailCollectionViewController: UICollectionViewController {
                             self.image = self.placeHolderimage
                             return
                     }
-                    AMBNetwork.requestImage(from: imageURL) { (image, error) in
+                    AMBNetwork.sharedInstance.requestImage(from: imageURL) { (image, error) in
                         DispatchQueue.main.async {
                             self.image = image ?? self.placeHolderimage
                         }

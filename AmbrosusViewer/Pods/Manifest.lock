@@ -1,16 +1,23 @@
 PODS:
-  - AmbrosusSDK (1.0.0)
+  - AmbrosusSDK (1.0.0):
+    - TrustKit (~> 1.6)
+  - TrustKit (1.6.0)
 
 DEPENDENCIES:
   - AmbrosusSDK (from `../`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - TrustKit
 
 EXTERNAL SOURCES:
   AmbrosusSDK:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AmbrosusSDK: 9c25cbb8ae685a477917e2abfc66d17392d75603
+  AmbrosusSDK: 39b5d53bdbacabb403de1733dc81d1e216a32060
+  TrustKit: 55ff9670dd8b3697eb23124cfc6c96aeca9c40e7
 
-PODFILE CHECKSUM: 35f68a079f0ed68433d79990be2b28f67e5b8ee1
+PODFILE CHECKSUM: 80ae0b4e164a6989b3632ec43453183c68f13b3d
 
 COCOAPODS: 1.5.3

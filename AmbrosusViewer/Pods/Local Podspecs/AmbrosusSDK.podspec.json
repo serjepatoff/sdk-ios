@@ -18,5 +18,10 @@
   "platforms": {
     "ios": "10.0"
   },
-  "source_files": "AmbrosusSDK/**/*"
+  "source_files": "AmbrosusSDK/**/*",
+  "dependencies": {
+    "TrustKit": [
+      "~> 1.6"
+    ]
+  }
 }

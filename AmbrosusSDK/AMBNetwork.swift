@@ -14,14 +14,51 @@
 
 import UIKit
 import os.log
+import TrustKit
 
 internal let ambLog = OSLog(subsystem: "com.ambrosus.sdk", category: "ambrosus_sdk")
 
 /// A Network Layer for interfacing with the Ambrosus API
-@objcMembers public final class AMBNetwork: NSObject {
-
+@objcMembers public final class AMBNetwork: NSObject, URLSessionDelegate {
+    public static let sharedInstance = AMBNetwork()
+    
+    private override init() {
+        super.init()
+    }
+    
     /// The base path for the Ambrosus API, modify this to change the endpoint if needed
-    public static var endpointBasePath = "https://gateway-test.ambrosus.com/"
+    public let endpointBasePath = "https://gateway-test.ambrosus.com/"
+    
+    lazy var urlSession : URLSession = {
+        let trustKitConfig = [
+            kTSKSwizzleNetworkDelegates: false,
+            kTSKPinnedDomains: [
+                "gateway-test.ambrosus.com": [
+                    kTSKEnforcePinning: true,
+                    kTSKIncludeSubdomains: true,
+                    kTSKExpirationDate: "2019-07-11",
+                    kTSKPublicKeyHashes: [
+                        "3kcNJzkUJ1RqMXJzFX4Zxux5WfETK+uL6Viq9lJNn4o=",
+                        "K5/tAKNkaPauri3A3n+uWwrNKcMv9gBU+d6yGsqHzQA="
+                    ],]]] as [String : Any]
+        
+        TrustKit.initSharedInstance(withConfiguration:trustKitConfig)
+        
+        var opQueue = OperationQueue.init()
+        opQueue.maxConcurrentOperationCount = 1
+        var session = URLSession.init(configuration: URLSessionConfiguration.ephemeral, delegate: self, delegateQueue: opQueue)
+        return session
+    }()
+    
+    public func urlSession(_ session: URLSession,
+                    didReceive challenge: URLAuthenticationChallenge,
+                    completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void)
+    {
+        let validator = TrustKit.sharedInstance().pinningValidator
+        if (validator.handle(challenge, completionHandler: completionHandler) == false) {
+            completionHandler(.performDefaultHandling, nil);
+        }
+    }
 
     fileprivate enum ResponseType {
         case json,
@@ -37,14 +74,14 @@ internal let ambLog = OSLog(subsystem: "com.ambrosus.sdk", category: "ambrosus_s
     /// - Parameters:
     ///   - path: The path to the required endpoint, not including the basePath of "https://network.ambrosus.com/"
     ///   - completion: The data returned (optional, nil if request fails)
-    private static func request(path: String, responseType: ResponseType = .json, completion: @escaping (_ data: Any?) -> Void) {
+    private func request(path: String, responseType: ResponseType = .json, completion: @escaping (_ data: Any?) -> Void) {
         guard let url = URL(string: path) else {
             completion(nil)
             os_log("%@", log: ambLog, type: .debug, "URL Invalid")
             return
         }
         let request = URLRequest(url: url, responseType: responseType)
-        let dataTask = URLSession.shared.dataTask(with: request) { (data, response, error) in
+        let dataTask = urlSession.dataTask(with: request) { (data, response, error) in
             guard let data = data, error == nil else {
                 completion(nil)
                 os_log("%@", log: ambLog, type: .debug, error?.localizedDescription ?? "")
@@ -70,10 +107,10 @@ internal let ambLog = OSLog(subsystem: "com.ambrosus.sdk", category: "ambrosus_s
     /// - Parameters:
     ///   - query: The identifier including type of scanner e.g. [gtin]=0043345534
     ///   - completion: The events if available, nil if none returned
-    public static func requestEvents(fromQuery query: String, completion: @escaping (_ data: [AMBEvent]?) -> Void) {
+    public func requestEvents(fromQuery query: String, completion: @escaping (_ data: [AMBEvent]?) -> Void) {
         let path = endpointBasePath + "events?data[type]=ambrosus.asset.identifier&data" + query
         request(path: path) { (data) in
-            fetchEvents(from: data, completion: { (events) in
+            self.fetchEvents(from: data, completion: { (events) in
                 guard let events = events else {
                     os_log("%@", log: ambLog, type: .debug, "Error, no events found for query: \(query)")
                     return
@@ -88,7 +125,7 @@ internal let ambLog = OSLog(subsystem: "com.ambrosus.sdk", category: "ambrosus_s
     /// - Parameters:
     ///   - id: The identifier associated with the desired asset
     ///   - completion: The asset if available, nil if unavailable
-    public static func requestAsset(fromId id: String, completion: @escaping (_ data: AMBAsset?) -> Void) {
+    public func requestAsset(fromId id: String, completion: @escaping (_ data: AMBAsset?) -> Void) {
         if let asset = AMBDataStore.sharedInstance.assetStore.fetch(withAssetId: id) {
             os_log("%@", log: ambLog, type: .debug, "Asset already downloaded, fetching from data store")
             completion(asset)
@@ -107,7 +144,7 @@ internal let ambLog = OSLog(subsystem: "com.ambrosus.sdk", category: "ambrosus_s
         }
     }
 
-    private static func fetchEvents(from data: Any?, completion: @escaping (_ data: [AMBEvent]?) -> Void) {
+    private func fetchEvents(from data: Any?, completion: @escaping (_ data: [AMBEvent]?) -> Void) {
         guard let data = data as? [String: Any],
             let results = data["results"] as? [[String: Any]] else {
                 os_log("%@", log: ambLog, type: .debug, "Couldn't find events for data")
@@ -123,10 +160,10 @@ internal let ambLog = OSLog(subsystem: "com.ambrosus.sdk", category: "ambrosus_s
     /// - Parameters:
     ///   - id: The identifier associated with the asset with desired events
     ///   - completion: The array of events if available, nil if unavailable
-    public static func requestEvents(fromAssetId id: String, completion: @escaping (_ data: [AMBEvent]?) -> Void) {
+    public func requestEvents(fromAssetId id: String, completion: @escaping (_ data: [AMBEvent]?) -> Void) {
         let path = endpointBasePath + "events?assetId=" + id
         request(path: path) { (data) in
-            fetchEvents(from: data, completion: { (events) in
+            self.fetchEvents(from: data, completion: { (events) in
                 guard let events = events else {
                     os_log("%@", log: ambLog, type: .debug, "Error, no asset found for asset id: \(id)")
                     return
@@ -141,7 +178,7 @@ internal let ambLog = OSLog(subsystem: "com.ambrosus.sdk", category: "ambrosus_s
     /// - Parameters:
     ///   - url: The URL of the image to download
     ///   - completion: The image if available, and optional error
-    public static func requestImage(from url: URL, completion: @escaping (_ image: UIImage?, _ error: Error? ) -> Void) {
+    public func requestImage(from url: URL, completion: @escaping (_ image: UIImage?, _ error: Error? ) -> Void) {
         let urlString =  url.absoluteString
         let urlNSString = urlString  as NSString
 
