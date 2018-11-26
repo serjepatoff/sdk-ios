@@ -129,25 +129,25 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
     super.init()
 
     sessionQueue.async {
-      self.configureDefaultComponents(withCaptureDevicePosition: captureDevicePosition)
+      self.configureDefaultComponents(with: captureDevicePosition)
     }
   }
 
   // MARK: - Initializing the AV Components
 
-  private func configureDefaultComponents(withCaptureDevicePosition: AVCaptureDevice.Position) {
+  private func configureDefaultComponents(with captureDevicePosition: AVCaptureDevice.Position) {
     for output in session.outputs {
       session.removeOutput(output)
     }
     
-    session.sessionPreset = .high
+    session.sessionPreset = .photo
     
     for input in session.inputs {
       session.removeInput(input)
     }
 
     // Add video input
-    switch withCaptureDevicePosition {
+    switch captureDevicePosition {
     case .front:
       if let _frontDeviceInput = frontDeviceInput {
         session.addInput(_frontDeviceInput)
@@ -179,11 +179,33 @@ public final class QRCodeReader: NSObject, AVCaptureMetadataOutputObjectsDelegat
             device.focusMode = .continuousAutoFocus
         }
         
-        if (device.isAutoFocusRangeRestrictionSupported) {
-            device.autoFocusRangeRestriction = .near
+        device.unlockForConfiguration()
+    }
+    
+    func applyZoomScale(scale:CGFloat) {
+        if let input = session.inputs.first {
+            if let device = (input as? AVCaptureDeviceInput)?.device {
+                try! device.lockForConfiguration()
+                
+                if (scale > 1.0) {
+                    if (device.videoZoomFactor * scale > 8) {
+                        device.videoZoomFactor = 8;
+                    } else {
+                        device.videoZoomFactor = device.videoZoomFactor * scale;
+                    }
+                } else {
+                    if (device.videoZoomFactor * scale < 1.0) {
+                        device.videoZoomFactor = 1.0;
+                    } else {
+                        device.videoZoomFactor = device.videoZoomFactor * scale;
+                    }
+                }
+                
+                device.unlockForConfiguration()
+            }
         }
         
-        device.unlockForConfiguration()
+        
     }
 
   /// Switch between the back and the front camera.
